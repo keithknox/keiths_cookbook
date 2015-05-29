@@ -1,0 +1,1 @@
+For my final project I am hoping to create a recipe search tool.  Users will be able to log in, search for recipes and save them to a favorites list.  If time allows, I would also like them to be able to post comments on what works and what doesn't work for them when following the recipe.
