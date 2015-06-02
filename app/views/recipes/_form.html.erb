@@ -14,18 +14,29 @@
       <% end %>
 
       <p>
-        <%=f.label :title %>
-        <%=f.text_field :title %>
+        <%=f.label :dish %>
+        <%=f.text_field :dish %>
       </p>
 
       <p>
-        <%=f.label :body %>
-        <%=f.text_area :body %>
+        <%=f.label :cuisine %>
+        <%=f.text_field :cuisine %>
       </p>
+
+      <p>
+        <%=f.label :ingredients %>
+        <%=f.text_area :ingredients %>
+      </p>
+
+      <p>
+        <%=f.label :directions %>
+        <%=f.text_area :directions %>
+      </p>
+
+
 
       <p>
         <%=f.submit %>
       </p>
 
       <% end %>
-      

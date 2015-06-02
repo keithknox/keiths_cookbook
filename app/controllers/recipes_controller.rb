@@ -2,6 +2,11 @@ class RecipesController < ApplicationController
 
   def index
     @recipes = Recipe.all
+    if params[:search]
+      @recipes = Recipe.search(params[:search]).order("created_at DESC")
+    else
+      @recipes = Recipe.order("created_at DESC")
+    end
   end
 
 
@@ -52,5 +57,5 @@ end
 
 private
   def recipe_params
-    params.require(:recipe).permit(:title,:body)
+    params.require(:recipe).permit(:dish,:cuisine, :ingredients, :directions)
   end

@@ -1,20 +1,40 @@
-<h1>Full List of Recipes</h1>
-<%= link_to 'Add New Recipe', new_recipe_path %>
-  <table>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-    </tr>
 
-    <% @recipes.each do |recipe| %>
+
+<%=link_to "Add Recipes", new_recipe_path%>
+<%= form_tag recipes_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Recipes" %>
+    <%= submit_tag "Search" %>
+  </p>
+<% end %>
+
+
+<!-- <%= link_to 'My Recipes', controller: 'recipes' %> -->
+  <!-- <table>
     <tr>
-      <td><%=recipe.title%></td>
-      <td><%=recipe.body%></td>
-      <td><%=link_to 'Show', recipe_path(recipe)%></td>
-      <td><%=link_to 'Edit', edit_recipe_path(recipe)%>
-      <td><%=link_to 'Delete', recipe_path(recipe),
-              method: :delete,
-              data: {confirm: "Are you sure?"} %></td>
+      <th>Dish</th>
+      <th>Cuisine</th>
+      <th>Ingredients</th>
+      <th>Directions</th>
+    </tr> -->
+
+    <!-- <% @recipes.each do |recipe| %>
+    <tr>
+      <td><%=recipe.dish%></td>
+      <td><%=recipe.cuisine%></td>
+      <td><%=recipe.ingredients%></td>
+      <td><%=recipe.directions%></td>
+      <td><%=link_to recipe.dish, recipe_path(recipe)%></td>
     </tr>
     <% end %>
-  </table>
+  </table> -->
+
+
+
+
+<!-- <% if @recipes.present? %>
+  <%= render @recipes %>
+  <% else %>
+  <p>Sorry, there are no recipes matching your search.<%=params[:search]%></p>
+  <%= link_to 'Add New Recipe', new_recipe_path %>
+  <% end %> -->

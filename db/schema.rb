@@ -27,11 +27,12 @@ ActiveRecord::Schema.define(version: 20150601225219) do
   add_index "comments", ["recipe_id"], name: "index_comments_on_recipe_id", using: :btree
 
   create_table "recipes", force: :cascade do |t|
-    t.string   "title"
-    t.text     "body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "dish"
+    t.text     "cuisine"
+    t.text     "ingredients"
+    t.text     "directions"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
-  add_foreign_key "comments", "recipes"
 end
