@@ -1,12 +1,19 @@
 
 
-<%=link_to "Add Recipes", new_recipe_path%>
-<%= form_tag recipes_path, :method => 'get' do %>
-  <p>
-    <%= text_field_tag :search, params[:search], placeholder: "Search Recipes" %>
-    <%= submit_tag "Search" %>
-  </p>
+<p>Welcome to the Recipe Index </p>
+
+
+
+
+<% @recipes.each do |recipe| %>
+<%=link_to recipe.dish, recipe_path(recipe)%>
 <% end %>
+
+<p><%=link_to 'Back', root_path %></p>
+
+
+
+
 
 
 <!-- <%= link_to 'My Recipes', controller: 'recipes' %> -->
@@ -28,13 +35,3 @@
     </tr>
     <% end %>
   </table> -->
-
-
-
-
-<!-- <% if @recipes.present? %>
-  <%= render @recipes %>
-  <% else %>
-  <p>Sorry, there are no recipes matching your search.<%=params[:search]%></p>
-  <%= link_to 'Add New Recipe', new_recipe_path %>
-  <% end %> -->
