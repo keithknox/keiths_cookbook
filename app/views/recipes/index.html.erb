@@ -6,11 +6,11 @@
 
 
 <% @recipes.each do |recipe| %>
-<%=link_to recipe.dish, recipe_path(recipe)%>
+  <p><%=link_to recipe.dish, recipe_path(recipe)%></p>
 <% end %>
 
-<p><%=link_to 'Back', root_path %></p>
-
+<p><%=link_to 'Home', root_path %></p>
+<p><%=link_to 'Search', recipes_search_path%></p>
 
 
 

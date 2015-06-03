@@ -10,7 +10,11 @@ class RecipesController < ApplicationController
   end
 
   def search
-    @recipes = Recipe.search(params[:search]).order("created_at DESC")
+    @recipes = if params[:search].present?
+      Recipe.search(params[:search]).order("created_at DESC")
+    else
+      nil
+    end
   end
 
 

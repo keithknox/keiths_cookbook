@@ -3,6 +3,6 @@ class Recipe < ActiveRecord::Base
     validates :dish, :cuisine, :ingredients, :directions, presence: true, length: {minimum: 5}
 
     def self.search(search)
-      where("dish LIKE ?", "%#{search}%")
+      where("dish ILIKE ? OR cuisine ILIKE ?", "%#{search}%","%#{search}")
     end
 end

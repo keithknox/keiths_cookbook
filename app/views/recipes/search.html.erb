@@ -12,7 +12,7 @@
   <%= render @recipes %>
   <% else %>
   <p>Sorry, there are no recipes matching your search. <%=params[:search]%></p>
-  <%= link_to 'Add New Recipe', new_recipe_path %>
+  <p><%= link_to 'Add New Recipe', new_recipe_path %></p>
   <% end %>
 
-  <%=link_to 'Back', root_path %>
+  <p><%=link_to 'Home', root_path %></p>
