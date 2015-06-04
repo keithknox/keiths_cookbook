@@ -19,7 +19,9 @@
 </p>
 
 <p> Comments </p>
-<%= render @recipe.comments%>
+<div id="comments">
+  <%= render @recipe.comments%>
+</div>
 
 <p>Add a comment</p>
 <%=render 'comments/form'%>
