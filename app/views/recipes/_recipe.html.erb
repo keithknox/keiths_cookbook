@@ -1,4 +1,8 @@
-<% @recipes.each do |recipe| %>
-<p><%=button_to recipe.dish, recipe_path(recipe),:method => :get%></p>
 
-<%end%>
+  <div class = "row">
+    <div class = "col s6 m6">
+      <% @recipes.each do |recipe| %>
+        <%=button_to recipe.dish, recipe_path(recipe),:method => :get%>
+        <%end%>
+    </div>
+  </div>

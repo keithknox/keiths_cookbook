@@ -16,22 +16,29 @@
 //= require turbolinks
 //= require_tree .
 
-jQuery.ajaxSetup({
-  'beforeSend': function(xhr){xhr.setRequestHeader("Accept", "text/javascript");}
-})
+
+  // sets post method
+  jQuery.ajaxSetup({
+    'beforeSend': function(xhr){xhr.setRequestHeader("Accept", "text/javascript");}
+  })
+
+  // initialises Jquery
+  $(document).ready(function(){
+
+    // adds comment
+
+    $("#new_comment").submit(function(evt){
+      console.log("fire comment!")
+      evt.preventDefault();
+      evt.stopImmediatePropagation();
+      $.post(
+        $(this).attr("action"),
+        $(this).serialize(),
+        null,
+        "script"
+      );
+      return false;
+    });
 
 
-$(document).ready(function(){
-  $("#new_comment").submit(function(evt){
-    console.log("fire")
-    evt.preventDefault();
-    evt.stopImmediatePropagation();
-    $.post(
-      $(this).attr("action"),
-      $(this).serialize(),
-      null,
-      "script"
-    );
-    return false;
-  });
 });

@@ -1,2 +1,4 @@
-$('#comments').append("<%= escape_javascript(render(:partial => @comment)) %>");
-$('#new_comment')[0].reset();
+// appends comments after form is submitted
+
+  $('#comments').append("<%= escape_javascript(render(:partial => @comment)) %>");
+  $('#new_comment')[0].reset();

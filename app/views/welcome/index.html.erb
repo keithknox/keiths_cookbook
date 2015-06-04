@@ -1,4 +1,14 @@
 
-<p><%=button_to "Add Recipes", new_recipe_path, :method => :get%></p>
-<p><%=button_to "Search Recipes", recipes_search_path, :method => :get%></p>
-<p><%=button_to "All Recipes", recipes_path, :method => :get%></p>
+<div class = "valign-wrapper">
+  <div class = "intro container">
+    <h5>This is Keith's cookbook.  We make it easy to add, search and discuss your favorite recipes.  To get started, please click on any of the links above.  Thanks for stopping by! </h5>
+  </div>
+</div>
+
+<div class = "valign-wrapper">
+  <div class = "row">
+    <div class = "col s4 m4 center-align valign"><%=button_to "Add Recipes", new_recipe_path, :method => :get%></div>
+    <div class = "col s4 m4 center-align valign"><%=button_to "Search Recipes", recipes_search_path, :method => :get%></div>
+    <div class = "col s4 m4 center-align valign"><%=button_to "All Recipes", recipes_path, :method => :get%></div>
+  </div>
+</div>

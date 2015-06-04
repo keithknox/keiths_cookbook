@@ -1,18 +1,22 @@
-<p> Please enter your search </p>
+<div class = "container">
+  <p> Please enter your search </p>
+    <%= form_tag recipes_search_path, :method => 'get' do %>
+      <p>
+        <%= text_field_tag :search, params[:search], :id => 'search_field', placeholder: "Search Recipes" %>
+        <%= submit_tag "Search", :name => nil %>
+      </p>
+    <% end %>
 
-<%= form_tag recipes_search_path, :method => 'get' do %>
-  <p>
-    <%= text_field_tag :search, params[:search], :id => 'search_field', placeholder: "Search Recipes" %>
-    <%= submit_tag "Search", :name => nil %>
-  </p>
-<% end %>
 
-
-<% if @recipes.present? %>
-  <%= render @recipes %>
+  <% if @recipes.present? %>
+      <%= render @recipes %>
   <% else %>
-  <p>Sorry, there are no recipes matching your search. <%=params[:search]%></p>
-  <p><%= button_to 'Add New Recipe', new_recipe_path,:method => :get%></p>
-  <% end %>
+      <p>Sorry, there are no recipes matching your search.  <%=params[:search]%></p>
+      <p><%= button_to 'Add New Recipe', new_recipe_path,:method => :get%></p>
+    <% end %>
+</div>
 
-  <p><%=button_to 'Home', root_path,:method => :get%></p>
+
+  <div class = "row">
+    <div class = "col s12 m12 center-align"><%=button_to 'Home', root_path,:method => :get%></div>
+</div>

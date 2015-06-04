@@ -1,6 +1,15 @@
-<p>Recipe Edit</p>
+  <div class = "container">
+      <p>Recipe Edit</p>
 
-<%= render 'form' %>
+      <%= render 'form' %>
+  </div>
 
-<p><%=button_to 'Home', root_path, :method => :get %></p>
-<p><%=button_to 'Search', recipes_search_path, :method => :get %></p>
+  <div class = "row">
+      <div class = "col s6 m6 center-align">
+        <%=button_to 'Home', root_path,:method => :get%>
+      </div>
+      
+      <div class = "col s6 m6 center-align">
+        <%=button_to 'Search', recipes_search_path, :method => :get %>
+      </div>
+  </div>
