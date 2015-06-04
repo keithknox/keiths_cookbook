@@ -152,3 +152,16 @@ pepper
 3.	In a large bowl, mix the onion and garlic, beef, crumbled bread, crushed crackers, egg, sour cream, Worcestershire sauce, and 1/2 can tomato sauce. Gradually stir in the milk 1 teaspoon at a time until mixture is moist, but not soggy. Transfer the mixture to a 5x9 inch loaf pan.
 4.	Bake uncovered in the preheated oven 40 minutes. Increase oven temperature to 400 degrees F (200 degrees C), and continue baking 15 minutes, to an internal temperature of 160 degrees F (70 degrees C).
 5.	In a small bowl, mix the remaining tomato sauce and ketchup. Pour over the top of the meatloaf, and continue baking 10 minutes.")
+
+fried_chicken = Recipe.create(dish:"Fried Chicken", cuisine:"American", ingredients:"
+1 (4 pound) chicken, cut into pieces
+1 cup buttermilk
+2 cups all-purpose flour for coating
+1 teaspoon paprika
+salt and pepper to taste
+2 quarts vegetable oil for frying
+", directions:"
+1.	Take your cut up chicken pieces and skin them if you prefer. Put the flour in a large plastic bag (let the amount of chicken you are cooking dictate the amount of flour you use). Season the flour with paprika, salt and pepper to taste (paprika helps to brown the chicken).
+2.	Dip chicken pieces in buttermilk then, a few at a time, put them in the bag with the flour, seal the bag and shake to coat well. Place the coated chicken on a cookie sheet or tray, and cover with a clean dish towel or waxed paper. LET SIT UNTIL THE FLOUR IS OF A PASTE-LIKE CONSISTENCY. THIS IS CRUCIAL!
+3.	Fill a large skillet (cast iron is best) about 1/3 to 1/2 full with vegetable oil. Heat until VERY hot. Put in as many chicken pieces as the skillet can hold. Brown the chicken in HOT oil on both sides. When browned, reduce heat and cover skillet; let cook for 30 minutes (the chicken will be cooked through but not crispy). Remove cover, raise heat again and continue to fry until crispy.
+4.	Drain the fried chicken on paper towels. Depending on how much chicken you have, you may have to fry in a few shifts. Keep the finished chicken in a slightly warm oven while preparing the rest.")
