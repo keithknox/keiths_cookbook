@@ -6,17 +6,17 @@
 
 
 <% @recipes.each do |recipe| %>
-  <p><%=link_to recipe.dish, recipe_path(recipe)%></p>
+  <p><%=button_to recipe.dish, recipe_path(recipe),:method => :get%></p>
 <% end %>
 
-<p><%=link_to 'Home', root_path %></p>
-<p><%=link_to 'Search', recipes_search_path%></p>
+<p><%=button_to 'Home', root_path %></p>
+<p><%=button_to 'Search', recipes_search_path, :method => :get%></p>
 
 
 
 
 
-<!-- <%= link_to 'My Recipes', controller: 'recipes' %> -->
+<!-- <%= button_to 'My Recipes', controller: 'recipes' %> -->
   <!-- <table>
     <tr>
       <th>Dish</th>
@@ -31,7 +31,7 @@
       <td><%=recipe.cuisine%></td>
       <td><%=recipe.ingredients%></td>
       <td><%=recipe.directions%></td>
-      <td><%=link_to recipe.dish, recipe_path(recipe)%></td>
+      <td><%=button_to recipe.dish, recipe_path(recipe)%></td>
     </tr>
     <% end %>
   </table> -->

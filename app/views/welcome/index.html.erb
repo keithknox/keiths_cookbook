@@ -1,4 +1,4 @@
 
-<p><%=link_to "Add Recipes", new_recipe_path%></p>
-<p><%=link_to "Search Recipes", recipes_search_path%></p>
-<p><%=link_to "All Recipes", recipes_path%></p>
+<p><%=button_to "Add Recipes", new_recipe_path, :method => :get%></p>
+<p><%=button_to "Search Recipes", recipes_search_path, :method => :get%></p>
+<p><%=button_to "All Recipes", recipes_path, :method => :get%></p>

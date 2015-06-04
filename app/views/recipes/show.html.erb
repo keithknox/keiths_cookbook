@@ -26,5 +26,5 @@
 <p>Add a comment</p>
 <%=render 'comments/form'%>
 
-<p><%=link_to 'Edit', edit_recipe_path(@recipe)%></p>
-<p><%=link_to 'Back', root_path %></p>
+<p><%=button_to 'Edit', edit_recipe_path(@recipe)%></p>
+<p><%=button_to 'Back', root_path %></p>

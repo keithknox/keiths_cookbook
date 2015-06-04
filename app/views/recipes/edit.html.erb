@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<p><%=link_to 'Home', root_path %></p>
-<p><%=link_to 'Search', recipes_search_path%></p>
+<p><%=button_to 'Home', root_path, :method => :get %></p>
+<p><%=button_to 'Search', recipes_search_path, :method => :get %></p>
