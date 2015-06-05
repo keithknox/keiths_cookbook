@@ -1,43 +1,47 @@
-  <%=form_for @recipe do |f| %>
-    <% if @recipe.errors.any? %>
-      <div id = "error_explanation">
-        <h2>
-          <%=pluralize(@recipe.errors.count, "error") %>
-          prohibited this article from being saved:
-        </h2>
+<!-- recipe submission/edit form -->
 
-        <ul>
-          <% @recipe.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-            <% end %>
-        </ul>
-        <% end %>
-      </div>
+  <div class = "container">
+    <%=form_for @recipe do |f| %>
+      <% if @recipe.errors.any? %>
+        <div id = "error_explanation">
+          <h2>
+            <%=pluralize(@recipe.errors.count, "error") %>
+            prohibited this article from being saved:
+          </h2>
 
-        <p>
-          <%=f.label :dish %>
-          <%=f.text_field :dish %>
-        </p>
+          <ul>
+            <% @recipe.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+              <% end %>
+          </ul>
+          <% end %>
+        </div>
 
-        <p>
-          <%=f.label :cuisine %>
-          <%=f.text_field :cuisine %>
-        </p>
+          <p>
+            <%=f.label :dish %>
+            <%=f.text_field :dish %>
+          </p>
 
-        <p>
-          <%=f.label :ingredients %>
-          <%=f.text_area :ingredients %>
-        </p>
+          <p>
+            <%=f.label :cuisine %>
+            <%=f.text_field :cuisine %>
+          </p>
 
-        <p>
-          <%=f.label :directions %>
-          <%=f.text_area :directions %>
-        </p>
+          <p>
+            <%=f.label :ingredients %>
+            <%=f.text_area :ingredients %>
+          </p>
+
+          <p>
+            <%=f.label :directions %>
+            <%=f.text_area :directions %>
+          </p>
 
 
 
-        <p>
-          <%=f.submit %>
-        </p>
+          <p>
+            <%=f.submit %>
+          </p>
 
-        <% end %>
+          <% end %>
+        </div>

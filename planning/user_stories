@@ -1,7 +1,8 @@
 User Stories
 ------------
-1. When a user logs in they should be able to create an account.
-2. At the main page, the user should be able to search the database for a recipe.
-3. When the recipes are returned a user should be able to read the recipe and decide whether or not they want to save it to their personal collection.
-4. When choosing a recipe, the recipe should appear clearly to the user in its own div front-and-center  and be easy to read.
-5. Users should be able to comment on what they liked, or didn't like about the recipe.
+1. User should be able to navigate from the main page
+2. User is able to add a recipe
+3. User is able to search the available recipes
+4. User is able to see all current recipes
+4. User is able to make comments
+5. User is able to delete comments

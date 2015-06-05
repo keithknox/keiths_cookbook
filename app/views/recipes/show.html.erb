@@ -1,42 +1,44 @@
-<div class = "container">
+<!-- full recipe display view -->
 
-  <p>
-    <strong>Dish:</strong>
-    <%=@recipe.dish %>
-  </p>
+  <div class = "container">
 
-  <p>
-    <strong>Cuisine:</strong>
-    <%=@recipe.cuisine %>
-  </p>
+    <p>
+      <strong>Dish:</strong>
+      <%=@recipe.dish %>
+    </p>
 
-  <p>
-    <strong>Ingredients:</strong>
-    <%=@recipe.ingredients %>
-  </p>
+    <p>
+      <strong>Cuisine:</strong>
+      <%=@recipe.cuisine %>
+    </p>
 
-  <p>
-    <strong>Directions:</strong>
-    <%=@recipe.directions %>
-  </p>
+    <p>
+      <strong>Ingredients:</strong>
+      <%=@recipe.ingredients %>
+    </p>
+
+    <p>
+      <strong>Directions:</strong>
+      <%=@recipe.directions %>
+    </p>
 
 
-  <p> Comments </p>
-    <div id = "comments">
-      <%= render @recipe.comments%>
+    <p> Comments </p>
+      <div id = "comments">
+        <%= render @recipe.comments%>
+      </div>
+
+    <p>Add a comment</p>
+      <%=render 'comments/form'%>
     </div>
 
-  <p>Add a comment</p>
-    <%=render 'comments/form'%>
-  </div>
 
 
-
-  <div class = "row">
-    <div class = "col s6 m6 center-align">
-      <%=button_to 'Home', root_path,:method => :get%>
+    <div class = "row">
+      <div class = "col s6 m6 center-align">
+        <%=button_to 'Home', root_path,:method => :get%>
+      </div>
+      <div class = "col s6 m6 center-align">
+        <%=button_to 'Edit', edit_recipe_path(@recipe), :method => :get%>
+      </div>
     </div>
-    <div class = "col s6 m6 center-align">
-      <%=button_to 'Edit', edit_recipe_path(@recipe), :method => :get%>
-    </div>
-  </div>

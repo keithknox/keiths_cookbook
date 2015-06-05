@@ -17,15 +17,15 @@
 //= require_tree .
 
 
-  // sets post method
+  // sets post method (courtesy of RailsCast) via an XMLHttp request.
   jQuery.ajaxSetup({
     'beforeSend': function(xhr){xhr.setRequestHeader("Accept", "text/javascript");}
   })
 
-  // initialises Jquery
+  // initialises Jquery and posts new comments to a div.
   $(document).ready(function(){
 
-    // adds comment
+    // posts comment upon submit
 
     $("#new_comment").submit(function(evt){
       console.log("fire comment!")
