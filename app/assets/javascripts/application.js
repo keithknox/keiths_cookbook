@@ -17,7 +17,7 @@
 //= require_tree .
 
 
-  // sets post method (courtesy of RailsCast) via an XMLHttp request.
+
   jQuery.ajaxSetup({
     'beforeSend': function(xhr){xhr.setRequestHeader("Accept", "text/javascript");}
   })
@@ -39,4 +39,21 @@
       );
       return false;
     });
-});
+
+    // attempted to remove comment
+    // $(".button_to").on('click', function(evt){
+    //   console.log("delete comment")
+    //   evt.preventDefault();
+    //   $.post(
+    //   $(this).closest("id").remove(),
+    //   null,
+    //   "script"
+    // );
+    //     return false;
+    // });
+
+
+
+
+
+  });
